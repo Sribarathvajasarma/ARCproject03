@@ -63,8 +63,6 @@ jobs:
       
     - name: Azure setup kubectl
       uses: azure/setup-kubectl@v3
-      with:
-        version: 'default' # default is latest stable
       id: install
       
     # Set up kustomize
