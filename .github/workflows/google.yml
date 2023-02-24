@@ -60,6 +60,11 @@ jobs:
     - name: Publish
       run: |-
         docker push "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA"
+      
+    - name: Azure setup kubectl
+      uses: azure/setup-kubectl@v3
+      id: install
+      
     # Set up kustomize
     - name: Set up Kustomize
       run: |-
